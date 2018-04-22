@@ -47,7 +47,7 @@ for epoch in range(n_epochs):
         optimiser.step()
 
         if i % print_interval == 0:
-            print(i, total_loss)
+            print('n: ', i, '\tLoss: ', total_loss)
             total_loss = 0
 
             input = Variable(LongTensor(1).random_(dataset.input_size))
