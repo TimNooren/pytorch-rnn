@@ -28,11 +28,3 @@ class CharDataset(Dataset):
 
     def to_tensor(self, seq):
         return LongTensor([self.char_to_i[char] for char in seq])
-
-if __name__ == '__main__':
-    ds = CharDataset('data.txt', 3)
-    print(ds.i_to_char)
-    print(ds.char_to_i)
-
-    for item in ds:
-        print(item)
